@@ -1,14 +1,12 @@
-import react, { Fragment } from "react";
-import Header from "./Header";
-import Description from "./Description";
-import Cart from './Cart'
+import "../Styles/Banner.css";
+import logo1 from "../assets/logo1.png";
 function Banner() {
+  const titel = "La maison jungle";
   return (
-    <Fragment>
-      <Header />
-      <Description />
-      <Cart />
-    </Fragment>
+    <div className="lmj-banner">
+      <img src={logo1} alt="logo jungel" className="lmj-logo" />
+      <h1 className="lmj-title ">{titel}</h1>
+    </div>
   );
 }
 export default Banner;

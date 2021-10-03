@@ -1,26 +1,19 @@
-import { Fragment } from "react";
+import "../Styles/Cart.css";
 
 function Cart() {
-  const monstera = 8;
-  const lierre = 10;
-  const bouquet = 15;
+  const monsteraPrice = 8;
+  const ivyPrice = 10;
+  const flowerPrice = 15;
   return (
-    <Fragment>
+    <div className="lmj-cart">
+      <h2>Panier</h2>
       <ul>
-        <li>
-          <p>monstera {monstera}$</p>
-        </li>
-
-        <li>
-          <p>lierre {lierre}$</p>
-        </li>
-
-        <li>
-          <p>bouquet {bouquet}$</p>
-        </li>
+        <li>Monstera : {monsteraPrice}€</li>
+        <li>Lierre : {ivyPrice}€</li>
+        <li>Fleurs : {flowerPrice}€</li>
       </ul>
-      <p>Total : {monstera + lierre + bouquet} $</p>
-    </Fragment>
+      Total : {monsteraPrice + ivyPrice + flowerPrice}€
+    </div>
   );
 }
 

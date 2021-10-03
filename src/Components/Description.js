@@ -1,4 +1,4 @@
-import react from "react";
+
 function Description() {
   const text = "Ici achetez toutes les plantes dont vous avez toujours rêvé ";
   const imogies = "🤪🤪🤪";
