@@ -1,6 +1,6 @@
 import "../Styles/Banner.css";
 import logo1 from "../assets/logo1.png";
-function Banner() {
+function Banner({children}) {
   const titel = "La maison jungle";
   return (
     <div className="lmj-banner">

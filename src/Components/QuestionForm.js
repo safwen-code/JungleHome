@@ -1,11 +1,23 @@
+import { useState } from "react";
 function QuestionForm() {
-  function HandelSubmit(e) {
-      e.preventDefault()
-    console.log(e.target["MyInput"].value);
+  const [inputValue, setinputValue] = useState("yr question please");
+
+  function hundelChange(e) {
+    if (!e.target.value.includes("f")) {
+      setinputValue(e.target.value);
+    }
+  }
+  function HandelSubmit(inputValue) {
+    alert(`do you want to post this ${inputValue}`);
   }
   return (
-    <form onSubmit={(e) => HandelSubmit(e)}>
-      <input type="text" name="MyInput" defaultValue="taper votre text" />
+    <form onSubmit={() => HandelSubmit(inputValue)}>
+      <input
+        type="text"
+        name="MyInput"
+        value={inputValue}
+        onChange={(e) => hundelChange(e)}
+      />
       <button type="submit">Entrer</button>
     </form>
   );
